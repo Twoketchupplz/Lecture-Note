@@ -37,3 +37,37 @@ LN.drawLine(x6, y6, x7, y7);
 LN.drawLine(x7, y7, x8, y8);
 LN.drawLine(x8, y8, x3, y3);
 ```
+
+아래는 90도 회전한 육각형입니다. (x,y 좌표를 서로 바꿈)
+```
+x1 = LN.getX1();
+y1 = LN.getY1();
+x2 = LN.getX2();
+y2 = LN.getY2();
+
+x3 = (x2 + x1)/2;
+y3 = y1;
+
+x6 = x3;
+y6 = y2;
+
+x4 = x2;
+y4 = y1 + (y2-y1)/4;
+
+x5 = x2;
+y5 = y1 + 3*(y2-y1)/4;
+
+x7 = x1;
+y7 = y5;
+
+x8 = x1;
+y8 = y4;
+
+LN.drawLine(x3, y3, x4, y4);
+LN.drawLine(x4, y4, x5, y5);
+LN.drawLine(x5, y5, x6, y6);
+LN.drawLine(x6, y6, x7, y7);
+LN.drawLine(x7, y7, x8, y8);
+LN.drawLine(x8, y8, x3, y3);
+```
+
